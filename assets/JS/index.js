@@ -17,8 +17,19 @@ const getBook = () => {
         col.className = "col col-md-4 col-xl-2";
 
         const card = document.createElement("div");
-        card.className = "card h-100 w-100 mx-auto d-inline-block ";
+        card.className = "card h-100 w-100 mx-auto  ";
 
+        // card.innerHTML = `
+        // <div class="card";">
+        //     <img src="${book.img}" class="card-img-top" alt="...">
+        //     <div class="card-body">
+        //         <h5 class="card-title">${book.title}</h5>
+        //         <p class="card-text">${book.price}</p>
+        //         <p class="card-text text-body-secondary ">${book.category}</p>
+        //         <a href="#" class="btn btn-primary">Scarta</a>
+        //         <a href="#" class="btn btn-primary">Compra</a>
+        //  </div>
+        // </div>`;
         const cardImg = document.createElement("img");
         cardImg.className = "img-fluid rounded-start mh-100";
         cardImg.style = "min-height: 310px";
@@ -39,7 +50,7 @@ const getBook = () => {
         cardBtn1.className = " btn btn-danger d-flex align-self-baseline ";
         cardBtn1.innerText = "Scarta";
         cardBtn1.addEventListener("click", function () {
-          card.classList.add("hidden");
+          col.classList.add("hidden");
         });
 
         const cardBtn2 = document.createElement("a");
@@ -61,8 +72,3 @@ const getBook = () => {
 window.addEventListener("DOMContentLoaded", () => {
   getBook();
 });
-
-// img
-// title
-// price
-// category
