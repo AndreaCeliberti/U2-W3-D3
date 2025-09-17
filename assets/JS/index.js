@@ -8,16 +8,16 @@ const getBook = () => {
         throw new Error("Errore");
       }
     })
-    .then((dataObj) => {
-      console.log(dataObj);
+    .then((data) => {
+      console.log(data);
       // qui va la dom manipulation
       const row = document.querySelector(".row");
-      dataObj.forEach((book) => {
+      data.forEach((book) => {
         const col = document.createElement("div");
         col.className = "col col-md-4 col-xl-2";
 
         const card = document.createElement("div");
-        card.className = "card mb-3 h-100 w-100 mx-auto p-3 d-inline-block ";
+        card.className = "card h-100 w-100 mx-auto d-inline-block ";
 
         const cardImg = document.createElement("img");
         cardImg.className = "img-fluid rounded-start mh-100";
